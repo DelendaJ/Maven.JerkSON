@@ -2,6 +2,7 @@ package io.zipcoder.itemparser;
 
 import io.zipcoder.utils.Item;
 import io.zipcoder.ItemParser;
+import io.zipcoder.utils.ItemParseException;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -12,8 +13,9 @@ import static org.junit.Assert.assertEquals;
 public class ParseItemListTest {
 
     @Test
-    public void test1() {
+    public void test1() throws ItemParseException {
         // given
+
         ItemParser itemParser = new ItemParser();
         String valueToParse = new StringBuilder()
                 .append("naMe:Milk;price:3.23;type:Food;expiration:1/25/2016##")
@@ -34,7 +36,7 @@ public class ParseItemListTest {
 
 
     @Test
-    public void test2() {
+    public void test2() throws ItemParseException {
         // given
         ItemParser itemParser = new ItemParser();
         String valueToParse = new StringBuilder()
@@ -61,7 +63,7 @@ public class ParseItemListTest {
 
 
     @Test
-    public void test3() {
+    public void test3() throws ItemParseException {
         // given
         ItemParser itemParser = new ItemParser();
         String valueToParse = new StringBuilder()
@@ -81,7 +83,7 @@ public class ParseItemListTest {
 
 
     @Test
-    public void test4() {
+    public void test4() throws ItemParseException {
         // given
         ItemParser itemParser = new ItemParser();
         String valueToParse = new StringBuilder()
@@ -99,7 +101,7 @@ public class ParseItemListTest {
 
 
     @Test
-    public void test5() {
+    public void test5() throws ItemParseException {
         // given
         ItemParser itemParser = new ItemParser();
         String valueToParse = new StringBuilder()
